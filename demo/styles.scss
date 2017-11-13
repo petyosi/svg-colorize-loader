@@ -1,0 +1,25 @@
+$color1: #FF0000;
+$color2: #0000FF;
+
+@function encodecolor($string) {
+    @if $string == null {
+        @return '';
+    }
+
+    @if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string: unquote('#{$hex}');
+    }
+    $string: '%23' + $string;
+    @return $string;
+}
+
+h1 {
+    color: red;
+    width: 50px;
+    height: 50px;
+    text-indent: -1000px;
+    overflow: hidden;
+    background-image: url('./small-logo.svg?color1=#{encodecolor($color2)}&color2=#{encodecolor($color1)}');
+    background-size: 50px;
+}
