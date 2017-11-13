@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/svg-colorize-loader.svg)](https://badge.fury.io/js/svg-colorize-loader)
+
 # svg-colorize-loader
 Webpack loader that allows you to change the colors of the SVG files used as background images using Sass variables. 
 This is mostly applicable if you are doing a theme that supports colors customization.
