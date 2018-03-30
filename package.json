@@ -1,6 +1,6 @@
 {
   "name": "svg-colorize-loader",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Webpack loader that allows you to change the colors of the SVG files used as background images using Sass variables",
   "main": "index.js",
   "author": "Petyo Ivanov (petyo.ivanov@icloud.com)",
