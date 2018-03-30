@@ -1,10 +1,11 @@
 const loaderUtils = require('loader-utils');
 
 module.exports = function(content) {
-    if (!this.resourceQuery) {
+    const options = loaderUtils.getOptions(this);
+    if (!this.resourceQuery || !options) {
         return content;
     }
-    const options = loaderUtils.getOptions(this);
+
     const replacementValues = loaderUtils.parseQuery(this.resourceQuery);
 
     return Object.entries(options).reduce((content, [name, initialValue]) => {
